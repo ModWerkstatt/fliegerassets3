@@ -1,0 +1,79 @@
+function data()
+return {
+	boundingInfo = {
+		bbMax = { 2.2, 4.5, 2.8, },
+		bbMin = { -5.5, -4.5, 0, },
+	},
+	collider = {
+		params = {
+			
+		},
+		type = "MESH",
+	},
+	lods = {
+		{
+			node = {
+			children = {
+				{
+					materials = { "asset/militaer/halberstadt/rumpf1.mtl", },
+					mesh = "asset/militaer/halberstadt/rumpf_lod0.msh",
+					transf = { 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0,},
+				}, 
+				{
+					materials = { "asset/militaer/halberstadt/glas.mtl", },
+					mesh = "asset/militaer/halberstadt/glas_lod0.msh",
+					transf = { 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0,},
+				},
+			},
+			    name = "RootNode",
+			    transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		},
+			static = false,
+			visibleFrom = 0,
+			visibleTo = 120,
+		},
+		{
+			node = {
+			children = {
+				{
+					materials = { "asset/militaer/halberstadt/rumpf1.mtl", },
+					mesh = "asset/militaer/halberstadt/rumpf_lod1.msh",
+					transf = { 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0,},
+				},  
+			},
+			    name = "RootNode",
+			    transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		},
+			static = false,
+			visibleFrom = 120,
+			visibleTo = 250,
+		},
+		{
+			node = {
+			children = {
+				{
+					materials = { "asset/militaer/halberstadt/rumpf1.mtl", },
+					mesh = "asset/militaer/halberstadt/rumpf_lod2.msh",
+					transf = { 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0,},
+				},  
+			},
+			    name = "RootNode",
+			    transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+		},
+			static = false,
+			visibleFrom = 250,
+			visibleTo = 2000,
+		}, 
+	},
+	metadata = {
+		availability = {
+			yearFrom = 1917,
+			yearTo = 1918,
+		},
+		cost = {
+			price = 1,
+		},
+	},
+	version = 1,
+}
+end

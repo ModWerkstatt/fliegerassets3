@@ -1,0 +1,242 @@
+function data()
+return { 
+	type = "ASSET_DEFAULT",
+	description = {
+		name = _("Luftwaffe Asset Set"),			
+		description = _("Statische Flugzeuge der Luftwaffe.")
+	},
+	availability = {},
+	buildMode = "MULTI",
+	categories = { "Flugzeuge" },
+	order = 212210101,
+	skipCollision = true,
+	autoRemovable = false,
+	params = {
+		{
+			key = "me163",
+			name = _("Messerschmitt 163 1944"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga", "ui/luftwaffe/me163_1.tga", "ui/luftwaffe/me163_2.tga",  "ui/luftwaffe/me163_3.tga",},
+			tooltip = _("Luftwaffe als Asset"),
+		},
+		{
+			key = "arado",
+			name = _("Arado 234 Blitz 1943"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga", "ui/luftwaffe/arado_1.tga", "ui/luftwaffe/arado_1b.tga",  "ui/luftwaffe/arado_1c.tga",  "ui/luftwaffe/arado_2.tga", "ui/luftwaffe/arado_2b.tga",  "ui/luftwaffe/arado_2c.tga", "ui/luftwaffe/arado_3.tga", "ui/luftwaffe/arado_3b.tga",  "ui/luftwaffe/arado_3c.tga",  "ui/luftwaffe/arado_4.tga", "ui/luftwaffe/arado_4b.tga",  "ui/luftwaffe/arado_4c.tga",},
+			tooltip = _("Luftwaffe als Asset"),
+		},
+		{
+			key = "he162",
+			name = _("Heinkel 162 1944"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga", "ui/luftwaffe/he162_1.tga", "ui/luftwaffe/he162_2.tga",  "ui/luftwaffe/he162_3.tga",  "ui/luftwaffe/he162_4.tga",},
+			tooltip = _("Luftwaffe als Asset"),
+		},
+		{
+			key = "he178",
+			name = _("Heinkel 178 1939"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga", "ui/luftwaffe/he178_1.tga", "ui/luftwaffe/he178_2.tga",  },
+			tooltip = _("Luftwaffe als Asset"),
+		},
+		{
+			key = "natter",
+			name = _("Bachem BA 349 1945"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga", "ui/luftwaffe/natter_1_2.tga", "ui/luftwaffe/natter_1.tga", "ui/luftwaffe/natter_2_2.tga", "ui/luftwaffe/natter_2.tga", "ui/luftwaffe/natter_3_2.tga", "ui/luftwaffe/natter_3.tga", "ui/luftwaffe/natter_4_2.tga", "ui/luftwaffe/natter_4.tga", "ui/luftwaffe/natter_mast.tga", },
+			tooltip = _("Luftwaffe als Asset"),
+		},
+		{
+			key = "ta183",
+			name = _("Ta 183 1945"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/luftwaffe/leer.tga", "ui/luftwaffe/ta183_1.tga", "ui/luftwaffe/ta183_2.tga", "ui/luftwaffe/ta183_3.tga", "ui/luftwaffe/ta183_4.tga", "ui/luftwaffe/ta183_5.tga", },
+			tooltip = _("Luftwaffe als Asset"),
+		},
+	},
+	updateFn = function(params)
+		local result = { }
+		result.models = {  }
+		local height = 0
+		
+		if params.me163 == 0 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+		
+		if params.me163 == 1 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/me163_1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.me163 == 2 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/me163_2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.me163 == 3 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/me163_3.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		
+		if params.arado == 0 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+		
+		if params.arado == 1 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/Arado1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.arado == 2 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/Arado1b.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.arado == 3 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/Arado1c.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.arado == 4 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/Arado2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.arado == 5 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/Arado2b.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.arado == 6 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/Arado2c.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.arado == 7 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/Arado3.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.arado == 8 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/Arado3b.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.arado == 9 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/Arado3c.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.arado == 10 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/Arado4.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.arado == 11 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/Arado4b.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.arado == 12 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/Arado4c.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		
+		if params.he162 == 0 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+		
+		if params.he162 == 1 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/he162_1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.he162 == 2 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/he162_2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.he162 == 3 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/he162_3.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.he162 == 4 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/he162_4.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		
+		if params.he178 == 0 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+		
+		if params.he178 == 1 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/he178_1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.he178 == 2 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/he178_2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		
+		if params.natter == 0 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+		
+		if params.natter == 1 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/natter_1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.natter == 2 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/natter_1_2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.natter == 3 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/natter_2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.natter == 4 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/natter_2_2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.natter == 5 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/natter_3.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.natter == 6 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/natter_3_2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.natter == 7 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/natter_4.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.natter == 8 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/natter_4_2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.natter == 9 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/natter_mast.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		
+		if params.ta183 == 0 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+		
+		if params.ta183 == 1 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/ta183_1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.ta183 == 2 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/ta183_2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.ta183 == 3 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/ta183_3.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.ta183 == 4 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/ta183_4.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.ta183 == 5 then
+		result.models[#result.models+1] = {id = "asset/Luftwaffe/ta183_5.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		
+		
+		
+		result.terrainAlignmentLists = { {
+			type = "EQUAL",
+			faces =  { }
+		} }
+		return result
+	end
+}
+end

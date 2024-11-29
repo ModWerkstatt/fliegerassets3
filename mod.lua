@@ -1,0 +1,20 @@
+function data()
+return {
+info = {
+  minorVersion = 0,
+  severityAdd = "NONE",
+  severityRemove = "WARNING",
+  name = _("mod_name"),
+  description = _("mod_desc"),
+  authors = {
+        {
+            name = "Bandion",
+            role = "CREATOR",
+        },
+  },
+  tags = {"europe", "assets", "planes" },
+  visible = true,
+},
+
+ }
+end

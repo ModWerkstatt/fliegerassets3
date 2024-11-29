@@ -1,0 +1,75 @@
+function data()
+return { 
+	type = "ASSET_DEFAULT",
+	description = {
+		name = _("Hubschrauber Asset2 Set"),			
+		description = _("Statische Hubschrauber.")
+	},
+	availability = {},
+	buildMode = "MULTI",
+	categories = { "Flugzeuge" },
+	order = 212210101,
+	skipCollision = true,
+	autoRemovable = false,
+	params = {
+		{
+			key = "bo105",
+			name = _("Bölkow Bo 105 1967"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/heli/leer.tga", "ui/heli/bo105_1.tga", "ui/heli/bo105_2.tga", "ui/heli/bo105_3.tga", "ui/heli/bo105_4.tga", "ui/heli/bo105_5.tga", "ui/heli/bo105_6.tga", "ui/heli/bo105_7.tga", "ui/heli/bo105_8.tga", "ui/heli/bo105_9.tga",},
+			tooltip = _("Bo 105 als Asset"),
+		},
+	},
+	updateFn = function(params)
+		local result = { }
+		result.models = {  }
+		local height = 0
+		
+		if params.bo105 == 0 then
+		result.models[#result.models+1] = {id = "asset/Bundeswehr/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+		
+		if params.bo105 == 1 then
+		result.models[#result.models+1] = {id = "asset/heli/Bo105_1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.bo105 == 2 then
+		result.models[#result.models+1] = {id = "asset/heli/Bo105_2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.bo105 == 3 then
+		result.models[#result.models+1] = {id = "asset/heli/Bo105_3.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.bo105 == 4 then
+		result.models[#result.models+1] = {id = "asset/heli/Bo105_4.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.bo105 == 5 then
+		result.models[#result.models+1] = {id = "asset/heli/Bo105_5.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.bo105 == 6 then
+		result.models[#result.models+1] = {id = "asset/heli/Bo105_6.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.bo105 == 7 then
+		result.models[#result.models+1] = {id = "asset/heli/Bo105_7.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.bo105 == 8 then
+		result.models[#result.models+1] = {id = "asset/heli/Bo105_8.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.bo105 == 9 then
+		result.models[#result.models+1] = {id = "asset/heli/Bo105_9.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		result.terrainAlignmentLists = { {
+			type = "EQUAL",
+			faces =  { }
+		} }
+		return result
+	end
+}
+end

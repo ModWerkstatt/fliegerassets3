@@ -1,0 +1,179 @@
+function data()
+return { 
+	type = "ASSET_DEFAULT",
+	description = {
+		name = _("WW1 Flugzeug Asset Set"),			
+		description = _("Statische Flugzeuge der Luftwaffe im WW1.")
+	},
+	availability = {},
+	buildMode = "MULTI",
+	categories = { "Flugzeuge" },
+	order = 212210101,
+	skipCollision = true,
+	autoRemovable = false,
+	params = {
+		{
+			key = "siemens",
+			name = _("Siemens-Schuckert D3 1917"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/militaer/leer.tga", "ui/militaer/siemens-1.tga", "ui/militaer/siemens-2.tga", "ui/militaer/siemens-3.tga", "ui/militaer/siemens-4.tga", "ui/militaer/siemens-5.tga", "ui/militaer/siemens-6.tga", },
+			tooltip = _("Luftwaffe des WW1 als Asset"),
+		},
+		{
+			key = "pfalzd3",
+			name = _("Pfalz DIIIa 1917"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/militaer/leer.tga", "ui/militaer/pfalz3-1.tga", "ui/militaer/pfalz3-2.tga", "ui/militaer/pfalz3-3.tga", "ui/militaer/pfalz3-4.tga", "ui/militaer/pfalz3-5.tga", "ui/militaer/pfalz3-6.tga", "ui/militaer/pfalz3-7.tga", },
+			tooltip = _("Luftwaffe des WW1 als Asset"),
+		},
+		{
+			key = "pfalzd12",
+			name = _("Pfalz D.XII 1918"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/militaer/leer.tga", "ui/militaer/pfalzd12_1.tga", "ui/militaer/pfalzd12_2.tga", "ui/militaer/pfalzd12_3.tga", "ui/militaer/pfalzd12_4.tga", "ui/militaer/pfalzd12_5.tga", "ui/militaer/pfalzd12_6.tga", },
+			tooltip = _("Luftwaffe des WW1 als Asset"),
+		},
+		{
+			key = "halbstdd3",
+			name = _("Halberstadt D3 1914"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/militaer/leer.tga", "ui/militaer/halberstadt_d3-1.tga", "ui/militaer/halberstadt_d3-2.tga", "ui/militaer/halberstadt_d3-3.tga", },
+			tooltip = _("Luftwaffe des WW1 als Asset"),
+		},
+		{
+			key = "etaube",
+			name = _("Etrich Taube 1910"),
+			uiType = "ICON_BUTTON",
+			values = { "ui/militaer/leer.tga", "ui/militaer/etrich_taube-1.tga", "ui/militaer/etrich_taube-2.tga", },
+			tooltip = _("Luftwaffe des WW1 als Asset"),
+		},
+	},
+	updateFn = function(params)
+		local result = { }
+		result.models = {  }
+		local height = 0
+		
+		if params.siemens == 0 then
+		result.models[#result.models+1] = {id = "asset/militaer/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+		
+		if params.siemens == 1 then
+		result.models[#result.models+1] = {id = "asset/militaer/siemens-1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.siemens == 2 then
+		result.models[#result.models+1] = {id = "asset/militaer/siemens-2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.siemens == 3 then
+		result.models[#result.models+1] = {id = "asset/militaer/siemens-3.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.siemens == 4 then
+		result.models[#result.models+1] = {id = "asset/militaer/siemens-4.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.siemens == 5 then
+		result.models[#result.models+1] = {id = "asset/militaer/siemens-5.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.siemens == 6 then
+		result.models[#result.models+1] = {id = "asset/militaer/siemens-6.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.pfalzd3 == 0 then
+		result.models[#result.models+1] = {id = "asset/militaer/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+		
+		if params.pfalzd3 == 1 then
+		result.models[#result.models+1] = {id = "asset/militaer/pfalz3-1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.pfalzd3 == 2 then
+		result.models[#result.models+1] = {id = "asset/militaer/pfalz3-2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.pfalzd3 == 3 then
+		result.models[#result.models+1] = {id = "asset/militaer/pfalz3-3.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.pfalzd3 == 4 then
+		result.models[#result.models+1] = {id = "asset/militaer/pfalz3-4.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.pfalzd3 == 5 then
+		result.models[#result.models+1] = {id = "asset/militaer/pfalz3-5.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.pfalzd3 == 6 then
+		result.models[#result.models+1] = {id = "asset/militaer/pfalz3-6.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.pfalzd3 == 7 then
+		result.models[#result.models+1] = {id = "asset/militaer/pfalz3-7.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.halbstdd3 == 0 then
+		result.models[#result.models+1] = {id = "asset/militaer/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+		
+		if params.halbstdd3 == 1 then
+		result.models[#result.models+1] = {id = "asset/militaer/halberstadt_d3-1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.halbstdd3 == 2 then
+		result.models[#result.models+1] = {id = "asset/militaer/halberstadt_d3-2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.halbstdd3 == 3 then
+		result.models[#result.models+1] = {id = "asset/militaer/halberstadt_d3-3.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.etaube == 0 then
+		result.models[#result.models+1] = {id = "asset/militaer/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+		
+		if params.etaube == 1 then
+		result.models[#result.models+1] = {id = "asset/militaer/etrich_taube-1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.etaube == 2 then
+		result.models[#result.models+1] = {id = "asset/militaer/etrich_taube-2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.pfalzd12 == 0 then
+		result.models[#result.models+1] = {id = "asset/militaer/leer.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -100, 1, }, }
+		end
+		
+		if params.pfalzd12 == 1 then
+		result.models[#result.models+1] = {id = "asset/militaer/pfalz_d12-1.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.pfalzd12 == 2 then
+		result.models[#result.models+1] = {id = "asset/militaer/pfalz_d12-2.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.pfalzd12 == 3 then
+		result.models[#result.models+1] = {id = "asset/militaer/pfalz_d12-3.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.pfalzd12 == 4 then
+		result.models[#result.models+1] = {id = "asset/militaer/pfalz_d12-4.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.pfalzd12 == 5 then
+		result.models[#result.models+1] = {id = "asset/militaer/pfalz_d12-5.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		if params.pfalzd12 == 6 then
+		result.models[#result.models+1] = {id = "asset/militaer/pfalz_d12-6.mdl", transf = {1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, }, }
+		end
+		
+		result.terrainAlignmentLists = { {
+			type = "EQUAL",
+			faces =  { }
+		} }
+		return result
+	end
+}
+end
