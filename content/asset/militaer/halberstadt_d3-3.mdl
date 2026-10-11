@@ -1,0 +1,81 @@
+function data()
+return { 
+		boundingInfo = { 
+			bbMax = { 2.2, 4.5, 2.8, },
+			bbMin = { -5.5, -4.5, 0, },
+		},
+		collider = { 
+			params = { 
+				halfExtents = { 3.85, 4.5, 1.4, },
+			},
+			transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, -1.65, 0, 1.4, 1, },
+			type = "BOX",
+		},
+		lods = {
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "/asset/militaer/halberstadt/mat/rumpf3.mtl", },
+							mesh = "/asset/militaer/halberstadt/msh/rumpf_lod0.msh",
+							name = "rumpf_lod0_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+						{ 
+							materials = { "/asset/militaer/halberstadt/mat/glas.mtl", },
+							mesh = "/asset/militaer/halberstadt/msh/glas_lod0.msh",
+							name = "glas_lod0_2",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+				},
+				visibleFrom = 0,
+				visibleTo = 120,
+			},
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "/asset/militaer/halberstadt/mat/rumpf3.mtl", },
+							mesh = "/asset/militaer/halberstadt/msh/rumpf_lod1.msh",
+							name = "rumpf_lod1_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+				},
+				visibleFrom = 120,
+				visibleTo = 250,
+			},
+			{ 
+				node = { 
+					children = {
+						{ 
+							materials = { "/asset/militaer/halberstadt/mat/rumpf3.mtl", },
+							mesh = "/asset/militaer/halberstadt/msh/rumpf_lod2.msh",
+							name = "rumpf_lod2_1",
+							transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+						},
+					},
+					name = "RootNode",
+					transf = { 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, },
+				},
+				visibleFrom = 250,
+				visibleTo = 2000,
+			},
+		},
+		metadata = { 
+			availability = { 
+				yearFrom = 1917,
+				yearTo = 1918,
+			},
+			cost = { 
+				price = 1,
+			},
+		},
+		version = 2,
+	}
+end
